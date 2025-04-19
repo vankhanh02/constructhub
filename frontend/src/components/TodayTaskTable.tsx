@@ -5,7 +5,7 @@ export const TodayTaskTable = () => {
       <div className="p-4 bg-white rounded-xl shadow-md min-h-[320px]">
         <div className="flex justify-between">
           <h3 className="text-base font-semibold">Công việc ngày hôm nay</h3>
-          <span className="text-red-500">Today: 01/01/2025</span>
+          <span className="text-red-500">Today: 19/04/2025</span>
         </div>
         <div className="overflow-x-auto mt-2">
           <table className="w-full text-sm border">

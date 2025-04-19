@@ -13,7 +13,7 @@ export const JobSummary = () => {
     <div className="bg-white p-4 rounded-xl shadow-md border border-gray-200 w-full max-w-[540px]">
       <div className="flex justify-between items-center mb-2">
         <h3 className="text-base font-semibold text-blue-900">Công việc</h3>
-        <span className="text-sm text-gray-500">Tháng 03/2025</span>
+        <span className="text-sm text-gray-500">Tháng 04/2025</span>
       </div>
 
       <div className="flex gap-4 items-start">

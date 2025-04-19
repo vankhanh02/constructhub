@@ -11,12 +11,12 @@ import {
   import { Select } from "antd";
   
   const data = [
-    { name: "Xi măng", used: 30, remaining: 70 },
-    { name: "Sắt", used: 25, remaining: 75 },
-    { name: "Thép", used: 20, remaining: 80 },
+    { name: "Xi măng", used: 32.25, remaining: 67.75 },
+    { name: "Sắt", used: 25.5, remaining: 74.5 },
+    { name: "Thép", used: 33.33, remaining: 66.67 },
     { name: "Cát", used: 40, remaining: 60 },
     { name: "Đá", used: 35, remaining: 65 },
-    { name: "Gạch", used: 50, remaining: 50 },
+    { name: "Gạch", used: 11.22, remaining: 88.78 },
     { name: "Vữa", used: 45, remaining: 55 },
     { name: "Bê tông", used: 60, remaining: 40 },
     { name: "Phụ gia xây dựng", used: 20, remaining: 80 },
@@ -35,7 +35,7 @@ import {
           <h3 className="text-lg font-semibold text-[#003366]">Thống kê vật tư</h3>
           <Select
             defaultValue="Tháng 03/2025"
-            options={[{ value: "Tháng 03/2025", label: "Tháng 03/2025" }]}
+            options={[{ value: "Tháng 03/2025", label: "Tháng 04/2025" }]}
             style={{ width: 150 }}
           />
         </div>

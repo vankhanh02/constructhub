@@ -24,9 +24,15 @@ export const Dashboard = () => {
       </div>
 
       {/* Hàng 2: Công việc hôm nay + biểu đồ tiến độ */}
-      <div className="grid grid-cols-2 sm:grid-cols-2 xl:grid-cols-2 gap-4">
-        <TodayTaskTable />
+      <div className="grid grid-cols-3 sm:grid-cols-5 xl:grid-cols-5 gap-4">
+        
+        <div className="col-span-3">
+          <TodayTaskTable />
+        </div>
+        <div className="col-span-2"> 
         <TaskCompletionPieChart />
+        </div>
+
       </div>
 
       {/* Hàng 3: Vật tư + đội thầu khoán */}
