@@ -7,7 +7,6 @@ export const Navbar = () => {
       <div className="space-x-4">
         <Link to="/" className="text-sm text-gray-600 hover:text-black">Dashboard</Link>
         <Link to="/projects" className="text-sm text-gray-600 hover:text-black">Công trình</Link>
-        {/* Thêm link cho các mục khác nếu cần */}
       </div>
     </nav>
   );
