@@ -24,13 +24,13 @@ public class DoiThauKhoanController {
         return doiThauKhoanService.countDoiThauKhoanByNguoiPhuTrach(nguoiPhuTrach);
     }
 
-    @GetMapping("list-by-nguoi-phu-trach")
+    @GetMapping("/list-by-nhanvien")
     public Page<DoiThauKhoan> findDoiThauKhoanByNguoiPhuTrach(
             @RequestParam Long nguoiPhuTrach,
-            @RequestParam int page,
-            @RequestParam int size,
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(defaultValue = "10") int size,
             @RequestParam(defaultValue = "id") String sort,
-            @RequestParam(defaultValue = "desc") String direction
+            @RequestParam(defaultValue = "asc") String direction
             ) {
         Sort.Direction sortDirection = direction.equalsIgnoreCase("asc") ? Sort.Direction.ASC : Sort.Direction.DESC;
         Sort sortBy= Sort.by(sortDirection, sort);
