@@ -17,15 +17,17 @@ import {
   Drill,
   DollarSign,
 } from "lucide-react";
+import { Link } from "react-router-dom";
+
 const items = [
   {
     title: "Dashboard",
-    url: "#",
+    url: "/",
     icon: LayoutDashboard,
   },
   {
     title: "Công trình",
-    url: "#",
+    url: "/projects",
     icon: SquareLibrary,
   },
   {
@@ -60,14 +62,14 @@ export function AppSidebar() {
               asChild
               className="data-[slot=sidebar-menu-button]:!p-1.5"
             >
-              <a href="#">
+              <Link to="/#">
                 <img
                   src={ConstructIcon}
                   className="h-9 w-9"
                   alt="Construct logo"
                 />
                 <span className="text-base font-semibold">ConstructHub</span>
-              </a>
+              </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>
