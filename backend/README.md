@@ -1,5 +1,7 @@
 site: http://localhost:8080
 
+tat ca deu la get method
+
 #máy móc :
 
 - may moc dang hoat dong: /maymoc/active
@@ -11,12 +13,15 @@ site: http://localhost:8080
 - cong trinh dang hoat dong: /congtrinh/active-count
 
 #doi thau khoan : 
-- so luong doi thau khoan: doithau/count
+- so luong doi thau khoan: /doithau/count
     Query param: nguoiPhuTrach
     vi dụ: http://localhost:8080/doithau/count?nguoiPhuTrach=2
-- danh sach doi thau khoan: doithau/list-by-nhanvien
+- danh sach doi thau khoan: /doithau/list-by-nhanvien
     Query param: nguoiPhuTrach
     vi dụ: http://localhost:8080/doithau/list-by-nhanvien?nguoiPhuTrach=2
+#Task
+- danh sach task theo trang thai: /task/count-by-status
+
 
 
 
