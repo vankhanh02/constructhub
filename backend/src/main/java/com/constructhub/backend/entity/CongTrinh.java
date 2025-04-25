@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -55,6 +56,11 @@ public class CongTrinh {
 
     @Column(name="cap_cong_trinh")
     private int capCongTrinh;
+
+
+    @ManyToMany(mappedBy = "congTrinhList")
+    @ToString.Exclude
+    private List<NhanVien> nhanVienList;
 
 
 

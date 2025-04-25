@@ -1,11 +1,10 @@
 package com.constructhub.backend.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
@@ -22,16 +21,26 @@ public class DoiThauKhoan {
     @Column(name="ma_cong_trinh")
     private Long maCongTrinh;
 
-    @Column(name="nguoi_phu_trach")
-    private Long nguoiPhuTrach;
 
-    @Column(name="dọi_truong")
+    @Column(name="doi_truong")
     private String doiTruong;
 
     @Column(name="so_luong_thanh_vien")
     private int soLuongThanhVien;
 
+
+    @Column(name="so_dien_thoai")
+    private String soDienThoai;
+
     @Column(name="loai")
     private String loai;
+
+
+    @Column(name = "nguoi_phu_trach")
+    private Long nguoiPhuTrach;
+
+
+
+
 
 }

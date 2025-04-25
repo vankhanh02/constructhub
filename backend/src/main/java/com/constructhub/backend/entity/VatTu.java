@@ -31,13 +31,14 @@ public class VatTu {
     private String donVi;
 
     @Column(name="so_luong")
-    private int so_luong;
+    private int soLuong;
 
-    @Column(name="phi_van_chuyen")
-    private BigDecimal phi_van_chuyen;
+    @Column(name="so_luong_muc_thap")
+    private String soLuongMucThap;
+
 
     @Column(name="nguon_mua")
-    private String nguon_mua;
+    private String nguonMua;
 
 
 

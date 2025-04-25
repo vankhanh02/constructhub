@@ -5,6 +5,9 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
+
+import java.util.List;
 
 @Data
 @Entity
@@ -38,4 +41,14 @@ public class NhanVien {
 
     @Column(name="vai_tro")
     private String vaiTro;
+
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "nhan_vien_cong_trinh",
+            joinColumns = @JoinColumn(name = "ma_nhan_vien"),
+            inverseJoinColumns = @JoinColumn(name = "ma_cong_trinh"))
+    private List<CongTrinh> congTrinhList;
+
+
+
+
 }
