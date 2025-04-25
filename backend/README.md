@@ -1,10 +1,10 @@
 site: http://localhost:8080
 
-#máy móc
+#máy móc :
 
--may moc dang hoat dong: /maymoc/active
--may moc hu hong: /maymoc/damaged
--danh sach may moc: /maymoc/list
+- may moc dang hoat dong: /maymoc/active
+- may moc hu hong: /maymoc/damaged
+- danh sach may moc: /maymoc/list
 
 #công trình
 
