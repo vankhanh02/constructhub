@@ -2,6 +2,7 @@ package com.constructhub.backend.controller;
 
 import com.constructhub.backend.entity.CongTrinh;
 import com.constructhub.backend.service.CongTrinhService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/congtrinh")
+@Tag( name = "Công Trình")
 public class CongTrinhController {
     @Autowired
     private CongTrinhService congTrinhService;

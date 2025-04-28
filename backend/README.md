@@ -1,6 +1,6 @@
 site: http://localhost:8080
 
-tat ca deu la get method
+Go to: http://localhost:8080/swagger-ui.html to view the API documentation.
 
 #máy móc :
 
