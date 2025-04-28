@@ -12,6 +12,7 @@
   --color-maincolor: #1e638a;
   --color-iconcolor: #64748b;
   --color-bgcolor: #f1f1f1;
+  --color-bgiconcolor: #e2e8f0;
   --color-textheadercolor: #0b3051;
   --color-boxborder: #b9b9b9;
   --color-headerbg: #d8e7ff;
@@ -161,5 +162,11 @@
   }
   .bg-main-color {
     background-color: var(--color-maincolor);
+  }
+  .bg-icon-color {
+    background-color: var(--color-bgiconcolor);
+  }
+  .text-icon-color {
+    color: var(--color-iconcolor);
   }
 }
