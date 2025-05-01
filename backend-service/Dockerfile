@@ -1,9 +1,28 @@
-FROM openjdk:17
+FROM maven:3.9.9 AS build
 
-ARG JAR_FILE=target/*.jar
+# Set the working directory
+WORKDIR /app
 
-COPY ${JAR_FILE} backend-service.jar
+# Copy the pom.xml file
+COPY pom.xml /app/
 
-ENTRYPOINT ["java", "-jar", "backend-service.jar"]
+# Copy the source code
+COPY src /app/src
 
-EXPOSE 8080
+# Build the application
+RUN mvn clean package -DskipTests
+
+# Stage 2: Run the application
+FROM openjdk-17-slim
+
+# Set the working directory
+WORKDIR /app
+
+# Copy the built jar file from the build stage (the name comes from pom.xml)
+COPY --from=build /app/target/backend-service.jar /app/backend-service.jar
+
+# Expose the port the app runs on
+EXPOSE 5001
+
+# Command to run the application
+ENTRYPOINT ["java", "-jar", "/app/backend-service.jar"]
