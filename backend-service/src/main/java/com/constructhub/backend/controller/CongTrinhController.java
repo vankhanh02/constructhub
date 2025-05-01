@@ -56,4 +56,5 @@ public class CongTrinhController {
     public ResponseData<Integer> getActiveConstructionCount() {
         return new ResponseData<>(HttpStatus.OK.value(), "Lấy số lượng công trình đang hoạt động thành công", congTrinhService.getActiveConstructionCount());
     }
+
 }

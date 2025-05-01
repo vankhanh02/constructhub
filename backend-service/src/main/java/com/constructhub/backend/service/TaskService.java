@@ -11,7 +11,7 @@ import java.util.Map;
 @Service
 public interface TaskService {
     Long addTask(TaskRequestDTO request);
-    public Map<String, Integer> getTaskStatusCounts();
+    Map<String, Integer> getTaskStatusCounts();
 
-    public Page<TaskResponseDTO> getAllTasks(Pageable pageable);
+    Page<TaskResponseDTO> getAllTasks(Pageable pageable);
 }
