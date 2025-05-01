@@ -47,6 +47,7 @@ public class CongTrinhServiceImpl implements CongTrinhService {
                 .ngayBatDau(congTrinh.getNgayBatDau())
                 .ngayKetThuc(congTrinh.getNgayKetThuc())
                 .maChuDauTu(congTrinh.getMaChuDauTu())
+                .tinhTrang(congTrinh.getTinhTrang())
                 .build());
     }
 
@@ -64,6 +65,7 @@ public class CongTrinhServiceImpl implements CongTrinhService {
                 .diaDiem(request.getDiaDiem())
                 .ngayBatDau(request.getNgayBatDau())
                 .ngayKetThuc(request.getNgayKetThuc())
+                .tinhTrang(request.getTinhTrang())
         .build();
         congTrinhRepository.save(congtrinh);
         return congtrinh.getId();
