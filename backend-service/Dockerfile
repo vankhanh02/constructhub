@@ -13,7 +13,7 @@ COPY src /app/src
 RUN mvn clean package -DskipTests
 
 # Stage 2: Run the application
-FROM openjdk-17-slim
+FROM openjdk-17
 
 # Set the working directory
 WORKDIR /app
