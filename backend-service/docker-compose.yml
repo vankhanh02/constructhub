@@ -1,0 +1,42 @@
+services:
+  postgresql:
+    image: postgres:17.0
+    container_name: postgres
+    cap_add:
+      - SYS_NICE
+    restart: always
+    environment:
+      - POSTGRES_DB=qltc1
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=123456
+    ports:
+      - '5432:5432'
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./initdb.sql:/docker-entrypoint-initdb.d/initdb.sql
+    networks:
+      - default
+
+  backend-service:
+    container_name: backend-service
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=dev
+      - POSTGRES_URL=jdbc:postgresql://postgres:5432/qltc1
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=123456
+    depends_on:
+      - postgresql
+    networks:
+      - default
+
+networks:
+  default:
+    name: backend-service
+
+volumes:
+  postgres_data:
