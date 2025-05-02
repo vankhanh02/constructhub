@@ -11,7 +11,10 @@ import { MaintenanceMachine } from "@/components/MaintenanceMachine";
 
 export const Dashboard = () => {
   return (
-    <div className="bg-slate-50 min-h-screen py-4 space-y-4 px-4">
+    <div className="bg-slate-50 min-h-screen space-y-4">
+      <div className="px-1 pt-0 pb-1 bg-white border-b border-gray-200">
+        <h1 className="text-xl font-semibold text-gray-800">Dashboard</h1>
+      </div>
       {/* Hàng 1: Các khối tóm tắt */}
       <div className="grid grid-cols-2 sm:grid-cols-6 xl:grid-cols-6 gap-4 w-fit mx-auto">
         <ProjectSummary />

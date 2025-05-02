@@ -1,47 +1,5 @@
 import { Link } from "react-router-dom";
-
-const projectList = [
-  {
-    id: 1,
-    name: "Trung tâm thương mại Plaza",
-    address: "126 Đ. Hồng Bàng, Phường 12, Quận 5, Hồ Chí Minh",
-    status: "Hoàn thành",
-    startDate: "01/01/2025",
-    endDate: "01/10/2025",
-    investor: "Công ty TNHH Xây dựng ABC",
-    progress: 65,
-  },
-  {
-    id: 2,
-    name: "Trung tâm thương mại Plaza",
-    address: "126 Đ. Hồng Bàng, Phường 12, Quận 5, Hồ Chí Minh",
-    status: "Tạm dừng",
-    startDate: "01/01/2025",
-    endDate: "01/10/2025",
-    investor: "Công ty TNHH Xây dựng ABC",
-    progress: 65,
-  },
-  {
-    id: 3,
-    name: "Trung tâm thương mại Plaza",
-    address: "126 Đ. Hồng Bàng, Phường 12, Quận 5, Hồ Chí Minh",
-    status: "Đang thi công",
-    startDate: "01/01/2025",
-    endDate: "01/10/2025",
-    investor: "Công ty TNHH Xây dựng ABC",
-    progress: 65,
-  },
-  {
-    id: 4,
-    name: "Trung tâm thương mại Plaza",
-    address: "126 Đ. Hồng Bàng, Phường 12, Quận 5, Hồ Chí Minh",
-    status: "Đang thi công",
-    startDate: "01/01/2025",
-    endDate: "01/10/2025",
-    investor: "Công ty TNHH Xây dựng ABC",
-    progress: 65,
-  },
-];
+import { projectList } from "@/components/Projects/ProjectList"; // Assuming you have a data file for project list
 
 export const Projects = () => {
   const getStatusColor = (status: string) => {
@@ -58,16 +16,18 @@ export const Projects = () => {
   };
 
   return (
-    <div className="p-4 space-y-4">
-      <h2 className="text-2xl font-semibold mb-4">Công trình</h2>
+    <div className="bg-slate-50 min-h-screen space-y-4">
+      <div className="px-1 pt-0 pb-1 bg-white border-b border-gray-200">
+        <h1 className="text-xl font-semibold text-gray-800">Công trình</h1>
+      </div>
       <div className="overflow-x-auto">
         <table className="min-w-full bg-white border rounded-lg">
           <thead>
             <tr className="bg-gray-100 text-left text-sm text-gray-600">
-              <th className="p-3">Mã công trình</th>
+              <th className="p-2">Mã công trình</th>
               <th className="p-3">Tên công trình</th>
               <th className="p-3">Địa điểm</th>
-              <th className="p-3">Trạng thái</th>
+              <th className="p-4">Trạng thái</th>
               <th className="p-3">Ngày bắt đầu</th>
               <th className="p-3">Ngày kết thúc</th>
               <th className="p-3">Chủ đầu tư</th>
@@ -77,7 +37,7 @@ export const Projects = () => {
           <tbody>
             {projectList.map((project) => (
               <tr key={project.id} className="border-t text-sm">
-                <td className="p-3">{project.id}</td>
+                <td className="p-2">{project.id}</td>
                 <td className="p-3 text-blue-600 font-medium hover:underline">
                   <Link to={`/projects/${project.id}`}>{project.name}</Link>
                 </td>
