@@ -22,7 +22,7 @@ WORKDIR /app
 COPY --from=build /app/target/backend-service.jar /app/backend-service.jar
 
 # Expose the port the app runs on
-EXPOSE 5001
+EXPOSE 8080
 
 # Command to run the application
 ENTRYPOINT ["java", "-jar", "/app/backend-service.jar"]
