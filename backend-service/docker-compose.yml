@@ -29,6 +29,7 @@ services:
       - POSTGRES_URL=jdbc:postgresql://postgres:5432/qltc1
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=123456
+      - OPENAPI_SERVER_URL=http://14.225.205.60:8080/
     depends_on:
       - postgresql
     networks:

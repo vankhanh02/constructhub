@@ -30,7 +30,7 @@ springdoc:
 openapi:
   service:
     api-docs: backend-service
-    server: http://localhost:${server.port:8080}
+    server: ${OPENAPI_SERVER_URL:http://localhost:8080}
     title: Backend service
     version: 1.0.0
 
