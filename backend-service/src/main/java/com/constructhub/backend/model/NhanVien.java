@@ -19,7 +19,7 @@ public class NhanVien extends BaseEntity{
     @Column(name="so_dien_thoai")
     private String soDienThoai;
 
-    @Column(name="diaChi")
+    @Column(name="dia_chi")
     private String diaChi;
 
     @Column(name="email")

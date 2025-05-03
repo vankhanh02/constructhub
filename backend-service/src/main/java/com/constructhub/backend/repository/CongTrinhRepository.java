@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface CongTrinhRepository extends JpaRepository<CongTrinh, Long>, JpaSpecificationExecutor<CongTrinh> {
-    @Query(value="SELECT COUNT(id) FROM cong_trinh WHERE tinh_trang='hoạt động'", nativeQuery = true)
+    @Query(value="SELECT COUNT(id) FROM cong_trinh WHERE tinh_trang='thi công'", nativeQuery = true)
     int getActiveConstructionCount();
 }

@@ -56,7 +56,7 @@ public class CongTrinh extends BaseEntity{
     private String loạiThietKe;
 
     @Column(name="cap_cong_trinh")
-    private int capCongTrinh;
+    private Integer capCongTrinh;
 
     @ManyToMany(mappedBy = "congTrinhList")
     @ToString.Exclude
