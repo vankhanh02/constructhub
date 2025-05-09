@@ -4,6 +4,7 @@ import { BuildOutlined } from "@ant-design/icons";
 import { Process } from "./Process";
 import { Progress } from "./Progress";
 import { Bank } from "./Bank";
+import { ProjectGant } from "./ProjectGant";
 
 type ProjectType = {
   id: number;
@@ -90,6 +91,7 @@ export const ProjectDetail = () => {
           <Process />
         </div>
       </div>
+      <ProjectGant />
     </div>
   );
 };
